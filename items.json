@@ -1,0 +1,55 @@
+{
+  "data":[
+    {
+      "imgUrl": "imgs/p1.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 240
+    },
+    {
+      "imgUrl": "imgs/p2.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 240
+    },
+    {
+      "imgUrl": "imgs/p3.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 180
+    },
+    {
+      "imgUrl": "imgs/p4.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 190
+    },
+    {
+      "imgUrl": "imgs/p5.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 210
+    },
+    {
+      "imgUrl": "imgs/p6.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 230
+    },
+    {
+      "imgUrl": "imgs/p7.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight":200
+    },
+    {
+      "imgUrl": "imgs/p8.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 210
+    },
+    {
+      "imgUrl": "imgs/p9.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 220
+    },
+    {
+      "imgUrl": "imgs/p10.jpg",
+      "briefIntro": "瀑布流测试",
+      "imgHeight": 240
+    }
+  ],
+  "code": 0
+}

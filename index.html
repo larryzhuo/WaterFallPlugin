@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局</title>
+    <script src="zepto.js"></script>
+    <script src="doT.js"></script>
+    <script src="waterfall.js"></script>
+
+    <script id="watertmpl" type="text/x-dot-template">
+        <div class="waterfall-item">
+            <img src="{{= it.imgUrl}}"/>
+            <p>{{= it.briefIntro}}</p>
+        </div>
+    </script>
+    <style>
+        #main-container{
+            position: relative;
+            width: 90%;
+        }
+        .waterfall-item{
+            position: absolute;
+        }
+        .waterfall-item img{
+            display: block;
+            width: 100%;
+        }
+        .waterfall-item p{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+
+    </div>
+
+    <script type="text/javascript">
+        new WaterFall({
+            container: "#main-container",   //父容器
+            minColumn: 2,    //resize window时保留的最小列数
+            colWidth: 208,   //每列宽度，当前列数就去 max(container.width/colWidth, minColumn)
+            colGap: 10,     //单元格列间距
+            rowGap: 10,     //单元格行坚决
+            loadDistance: 0,   //底部距离为多少时开始加载
+            load: function(successCallBack){    //每次加载固定数据的函数，success为调整位置的函数
+                $.ajax({
+                    url: 'items.json',
+                    data: {},
+                    type: 'get',
+                    dataType: 'json',
+                    success: function(result){
+                        if(result.code == 0)
+                            successCallBack(result.data, '#watertmpl');
+                    }
+                });
+            }
+        })
+    </script>
+</body>
+</html>
